@@ -76,7 +76,7 @@ Use the following credentials to log in as an admin:
 ## Video Overview
 For a detailed walkthrough of the project, watch the video below:
 
-[**Watch Video Overview**](https://drive.google.com/file/d/1aNy2eDioihp-ON5XCO_9mHaFCVUoZ-6_/view)
+[**Watch Video Overview**](https://youtu.be/Uf8_KfRIgfY?si=TGEZ9v8iXAlWmCHd)
 
 ## 🛠️ API Routes (Optional)
 | Method | Endpoint | Description |
