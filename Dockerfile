@@ -43,4 +43,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 EXPOSE 80
 
 # Start Apache
-CMD ["apache2-foreground"]
+
+# Start Apache with migration + key generate
+CMD php artisan key:generate && php artisan migrate --force && apache2-foreground
