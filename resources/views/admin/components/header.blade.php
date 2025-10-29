@@ -1,6 +1,6 @@
 <div class="header">
     <button id="toggleBtn" class="toggle-btn"><i class="fas fa-bars"></i></button>&nbsp;
-    <div class="brand me-atuo">Quizify-Online Quiz System</div>
+    <div class="brand me-atuo">クイズ・ゲーム-Online Quiz System</div>
     <div class="user-actions">
         <!-- User Dropdown -->
         <div class="dropdown">

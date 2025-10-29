@@ -3,7 +3,7 @@
 @section('content')
 <div class="container my-5">
 
-    <h1 class="text-center display-4 fw-bold">Welcome to <span class="text-primary">Quizify</span></h1>
+    <h1 class="text-center display-4 fw-bold">Welcome to <span class="text-primary">クイズ・ゲーム</span></h1>
     <hr class="modern-hr">
 
     <!-- Dashboard Header -->

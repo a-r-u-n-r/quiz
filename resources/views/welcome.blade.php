@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizify - Empowering Minds, One Quiz at a Time</title>
+    <title>クイズ・ゲーム - Empowering Minds, One Quiz at a Time</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Reset body and html */
@@ -250,15 +250,15 @@
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
-        <div class="bubble">Quizify</div>
+        <div class="bubble">クイズ・ゲーム</div>
 
         <!-- Hero Content -->
         <div class="hero-content">
-            <h1>Welcome to Quizify</h1>
+            <h1>Welcome to 大成設備_クイズ・ゲーム</h1>
             <p>Your Ultimate Online Quiz Companion. Empowering minds, one quiz at a time!</p>
             <div class="btn-container">
-                <a href="{{ route('login') }}" class="btn btn-primary btn-lg">Login Quizify</a>
-                <a href="{{ route('register') }}" class="btn btn-secondary btn-lg">Join Quizify</a>
+                <a href="{{ route('login') }}" class="btn btn-primary btn-lg">Login クイズ・ゲーム</a>
+                <a href="{{ route('register') }}" class="btn btn-secondary btn-lg">Join クイズ・ゲーム</a>
             </div>
         </div>
     </div>
