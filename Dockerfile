@@ -45,4 +45,4 @@ EXPOSE 80
 # Start Apache
 
 # Start Apache with migration + key generate
-CMD php artisan key:generate && php artisan migrate --force && apache2-foreground
+CMD php artisan migrate --force && apache2-foreground
