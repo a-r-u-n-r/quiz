@@ -11,7 +11,7 @@
       <div class="col-md-6 mb-3 mb-md-0 fade-in">
         <div class="card modern-card shadow-sm">
           <div class="modern-card-header">
-            Available Quizzes
+            クイズ
           </div>
           <div class="card-body">
             @if($quizzes->isNotEmpty())
@@ -23,7 +23,7 @@
         <p class="small text-muted mb-0">{{ Str::limit($quiz->description, 60) }}</p>
         </div>
         <a href="{{ route('user.quiz.start', $quiz->id) }}" class="btn modern-btn rounded-pill">
-        Start Quiz
+       クイズ始め
         <i class="fas fa-arrow-right ms-1"></i>
         </a>
         </li>
@@ -31,18 +31,17 @@
         </ul>
       @else
     <div class="text-center text-muted">
-      <p class="mb-0">No quizzes available at the moment.</p>
+      <p class="mb-0">クイズはすぐに追加します</p>
     </div>
   @endif
           </div>
         </div>
       </div>
 
-      <!-- Achievements Section -->
       <div class="col-md-6 fade-in">
         <div class="card modern-achievement-card shadow-sm">
           <div class="modern-achievement-header">
-            Achievements
+            トレーニング
           </div>
           <div class="card-body">
             @if($achievements->isNotEmpty())
@@ -56,7 +55,54 @@
         </ul>
       @else
     <div class="text-center text-muted">
-      <p class="mb-0">No achievements to display at the moment.</p>
+      <p class="mb-0">現在トレーニングがない</p>
+    </div>
+  @endif
+          </div>
+        </div>
+      </div>
+        <div class="col-md-6 fade-in">
+        <div class="card modern-achievement-card shadow-sm">
+          <div class="modern-achievement-header">
+          試験対策
+          </div>
+          <div class="card-body">
+            @if($achievements->isNotEmpty())
+        <ul class="list-group list-group-flush">
+          @foreach ($achievements as $achievement)
+        <li class="list-group-item modern-achievement-item">
+        <h4 class="achievement-title">{{ $achievement->title }}</h4>
+        <p class="achievement-description">{{ $achievement->description }}</p>
+        </li>
+      @endforeach
+        </ul>
+      @else
+    <div class="text-center text-muted">
+      <p class="mb-0">現在試験対策がない</p>
+    </div>
+  @endif
+          </div>
+        </div>
+      </div>
+
+            <div class="col-md-6 fade-in">
+        <div class="card modern-achievement-card shadow-sm">
+          <div class="modern-achievement-header">
+            設定
+          </div>
+          <div class="card-body">
+            @if($achievements->isNotEmpty())
+        <ul class="list-group list-group-flush">
+          @foreach ($achievements as $achievement)
+        <li class="list-group-item modern-achievement-item">
+        <h4 class="achievement-title">{{ $achievement->title }}</h4>
+        <p class="achievement-description">{{ $achievement->description }}</p>
+        </li>
+      @endforeach
+        </ul>
+      @else
+    <div class="text-center text-muted">
+      <p class="mb-0">現在トレーニングがない</p>
     </div>
   @endif
           </div>
@@ -65,41 +111,6 @@
     </div>
     <hr class="modern-hr">
 
-    <!-- Stats Section -->
-    <div class="row mb-4 p-0 m-0">
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card stats-card bg-info-gradient text-center">
-          <div class="card-body">
-            <h6 class="stats-title">Total Quizzes</h6>
-            <h3 class="stats-number">{{ $totalQuizzes }}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card stats-card bg-success-gradient text-center">
-          <div class="card-body">
-            <h6 class="stats-title">Completed Quizzes</h6>
-            <h3 class="stats-number">{{ $completedQuizzes }}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card stats-card bg-warning-gradient text-center">
-          <div class="card-body">
-            <h6 class="stats-title">Top Score</h6>
-            <h3 class="stats-number">{{ $topScore }}</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-4">
-        <div class="card stats-card bg-dark-gradient text-center">
-          <div class="card-body">
-            <h6 class="stats-title">Average Score</h6>
-            <h3 class="stats-number">{{ $averageScore }}</h3>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Leaderboard Section -->
     <div class="row mb-4 p-0 m-0">
@@ -107,11 +118,11 @@
         <div class="card leaderboard-card shadow-sm border-0">
           <div class="card-header leaderboard-header">
             <h5 class="mb-0">
-              <i class="fas fa-trophy leaderboard-icon me-2"></i> Leaderboard
+              <i class="fas fa-trophy leaderboard-icon me-2"></i> ランキング
             </h5>
             <button class="btn btn-sm leaderboard-button ms-auto" data-bs-toggle="modal"
               data-bs-target="#leaderboardModal">
-              View Leaderboard <i class="fas fa-chevron-right ms-1"></i>
+              ランキング表 <i class="fas fa-chevron-right ms-1"></i>
             </button>
           </div>
         </div>
@@ -122,12 +133,11 @@
     <div class="container recommended-quizzes">
       <div class="card shadow-lg rounded-lg border-0">
         <div class="card-header recommended-quizzes-card-header bg-gradient text-white bg-primary align-items-center">
-          <h5 class="text-center"><i class="fas fa-star text-warning me-2"></i> Recommended Quizzes</h5>
+          <h5 class="text-center"><i class="fas fa-star text-warning me-2"></i> お勧めのクイズ</h5>
         </div>
         <div class="card-body">
           @if($recommendedQuizzes->isEmpty())
-        <p class="no-quizzes-msg text-center text-muted">No quizzes available to recommend. You've completed all
-        quizzes!</p>
+        <p class="no-quizzes-msg text-center text-muted">おすすめできるクイズはありません。すべてのクイズを完了しました！</p>
       @else
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         @foreach($recommendedQuizzes as $quiz)
@@ -141,10 +151,12 @@
           <p class="card-text recommended-quiz-card-text text-light" style="font-size: 1rem; opacity: 0.9;">
           {{ Str::limit($quiz->description, 100, '...') }}
           </p>
-          <a href="{{ route('user.quiz.start', $quiz->id) }}" class="btn start-quiz-btn btn-lg px-4 py-2 mt-3"
-          style="border-radius: 30px; background: #ffffff; color: rgb(0, 0, 0); transition: all 0.3s ease;">
-          Start Quiz
-          </a>
+<a href="{{ route('user.quiz.start', $quiz->id) }}" 
+   id="startQuizBtn"
+   class="btn start-quiz-btn btn-lg px-4 py-2 mt-3"
+   style="border-radius: 30px; background: #ffffff; color: rgb(0, 0, 0); transition: all 0.3s ease;">
+   Start Quiz
+</a>
           </div>
           </div>
         </div>
@@ -223,6 +235,16 @@
     </div>
   </div>
 </div>
+<!-- Loader Modal -->
+<div class="modal fade" id="quizStartLoader" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered text-center">
+        <div class="modal-content" style="background: transparent; border: none; box-shadow:none;">
+            <div class="spinner-border" role="status" style="width: 4rem; height: 4rem;"></div>
+            <h5 class="mt-3 text-white fw-bold">Preparing your quiz...</h5>
+        </div>
+    </div>
+</div>
+
 @endsection
 <style>
   tbody tr:hover {
@@ -265,3 +287,18 @@
     transition: all 0.3s ease;
   }
 </style>
+<script>
+document.getElementById("startQuizBtn").addEventListener("click", function(e){
+    e.preventDefault();
+
+    let quizUrl = this.getAttribute("href");
+
+    // Show loading animation
+    let loader = new bootstrap.Modal(document.getElementById('quizStartLoader'));
+    loader.show();
+
+    setTimeout(() => {
+        window.location.href = quizUrl;
+    }, 2000); // 2 seconds delay
+});
+</script>

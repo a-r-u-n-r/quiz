@@ -19,7 +19,7 @@
                 <div class="col-md-6 text-center text-md-end">
                     <a id="scoreButton" class="btn btn-lg px-5 py-3 fw-bold gradient-btn-standard text-white"
                         style="border-radius: 12px; font-size: 18px; transition: all 0.3s ease; display: inline-block;">
-                        Your score: {{ $score }} / {{ count($quiz->questions) }}
+                        クイズ結果: {{ 100/count($quiz->questions)*$score }} / {{ 100 }}
                     </a>
                 </div>
 
@@ -31,8 +31,8 @@
                     style="z-index: 1050; width: 80%; max-width: 400px; background: linear-gradient(135deg, #00d2ff, #3a7bd5); color: #fff;">
                     <div>
                         <i class="bi bi-stars fs-1 mb-3"></i> <!-- Modern Icon -->
-                        <h2 class="fw-bold mb-3">🎉 Congratulations! 🎉</h2>
-                        <p class="fs-5 mb-0">You've achieved perfection with all correct answers!</p>
+                        <h2 class="fw-bold mb-3">🎉 おめでとうと! 🎉</h2>
+                        <p class="fs-5 mb-0">すべての答えは成功!</p>
                     </div>
                 </div>
             </div>

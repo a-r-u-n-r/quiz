@@ -1,7 +1,7 @@
   <!-- Header Section -->
   <div class="header">
     <div class="project-name">
-      <i class="fas fa-trophy"></i> Quizify
+      <i class="fas fa-trophy"></i> クイズ・ゲーム
     </div>
     <div class="user-profile dropdown btn btn-warning py-1">
       <span>{{ auth()->user()->name }}</span>
